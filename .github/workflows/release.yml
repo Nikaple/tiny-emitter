@@ -9,7 +9,7 @@ env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -28,4 +28,4 @@ jobs:
           node-version: '14'
 
       - name: Release
-        run: npm run release
+        run: npm publish
