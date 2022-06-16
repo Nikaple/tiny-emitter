@@ -1,4 +1,6 @@
-# tiny-emitter
+# This is a fork of [tiny-emitter](https://github.com/scottcorgan/tiny-emitter) with generic type support for events!
+
+# typed-tiny-emitter
 
 A tiny (less than 1k) event emitter library.
 
@@ -7,13 +9,13 @@ A tiny (less than 1k) event emitter library.
 ### npm
 
 ```
-npm install tiny-emitter --save
+npm install typed-tiny-emitter --save
 ```
 
 ## Usage
 
 ```js
-var Emitter = require('tiny-emitter');
+var Emitter = require('typed-tiny-emitter');
 var emitter = new Emitter();
 
 emitter.on('some-event', function (arg1, arg2, arg3) {
@@ -26,7 +28,7 @@ emitter.emit('some-event', 'arg1 value', 'arg2 value', 'arg3 value');
 Alternatively, you can skip the initialization step by requiring `tiny-emitter/instance` instead. This pulls in an already initialized emitter.
 
 ```js
-var emitter = require('tiny-emitter/instance');
+var emitter = require('typed-tiny-emitter/instance');
 
 emitter.on('some-event', function (arg1, arg2, arg3) {
  //
